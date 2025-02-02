@@ -10,14 +10,15 @@ const SideMenu = () => {
   const pathname = usePathname(); // Get current route
 
   return (
-    <aside
+
+     <aside
       className={`bg-white shadow-md h-screen p-4 transition-all duration-300 ${
         isExpanded ? "w-64" : "w-16"
-      } ${className}`}
+      }`}
     >
       <button
         className="mb-6 p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition"
-        }
+        onClick={() => setIsExpanded(!isExpanded)}
       >
         {isExpanded ? (
           <ChevronLeft className="w-6 h-6 text-gray-600" />
