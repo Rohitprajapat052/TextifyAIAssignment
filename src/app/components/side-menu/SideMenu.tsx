@@ -5,7 +5,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation"; // Import usePathname
 
-const SideMenu = ({className = "") => {
+const SideMenu = ({className = ""}) => {
   const [isExpanded, setIsExpanded] = useState(true);
   const pathname = usePathname(); // Get current route
 
