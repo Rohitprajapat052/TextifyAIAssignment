@@ -5,7 +5,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation"; // Import usePathname
 
-const SideMenu = () => {
+const SideMenu = ({className = "") => {
   const [isExpanded, setIsExpanded] = useState(true);
   const pathname = usePathname(); // Get current route
 
@@ -13,7 +13,7 @@ const SideMenu = () => {
     <aside
       className={`bg-white shadow-md h-screen p-4 transition-all duration-300 ${
         isExpanded ? "w-64" : "w-16"
-      }`}
+      } ${className}`}
     >
       <button
         className="mb-6 p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition"
